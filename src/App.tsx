@@ -6,10 +6,10 @@ function App() {
 
   const transformText = (text: string) => {
     return text
-      .replace(/^## (.*$)/gim, '<h2>$1</h2>')
-      .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+      .replace(/^## (.*$)/gm, '<h2>$1</h2>')
+      .replace(/^# (.*$)/gm, '<h1>$1</h1>')
       .replace(/^---$/gm, '<hr />')
-      .replace(/\n\n(.*$)/gim, '<p>$1</p>')
+      .replace(/\n\n(.*$)/gm, '<p>$1</p>')
       .trim();
   };
 
