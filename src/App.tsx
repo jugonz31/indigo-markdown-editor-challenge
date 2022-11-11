@@ -1,34 +1,7 @@
-import { useState } from 'react';
-import styles from './App.module.css';
+import { MainPage } from './pages';
 
 function App() {
-  const [textInput, setTextInput] = useState('');
-
-  const transformText = (text: string) => {
-    return text
-      .replace(/^## (.*$)/gm, '<h2>$1</h2>')
-      .replace(/^# (.*$)/gm, '<h1>$1</h1>')
-      .replace(/^---$/gm, '<hr />')
-      .replace(/\n\n(.*$)/gm, '<p>$1</p>')
-      .trim();
-  };
-
-  return (
-    <main>
-      <h1 className={styles.title}>Indigo Markdown Editor Challenge</h1>
-      <h2 className={styles.subtitle}>By: Juan Gonzalez</h2>
-      <hr />
-      <div className={styles.container}>
-        <h3 className={styles.gridTitle}>Input</h3>
-        <h3 className={styles.gridTitle}>Output</h3>
-        <textarea onChange={(e) => setTextInput(e.target.value)} rows={5} />
-        <div
-          className={styles.result}
-          dangerouslySetInnerHTML={{ __html: transformText(textInput) }}
-        />
-      </div>
-    </main>
-  );
+  return <MainPage />;
 }
 
 export default App;

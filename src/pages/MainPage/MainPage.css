@@ -1,0 +1,9 @@
+.main-page {
+  padding: 10px;
+}
+
+.main-page__title,
+.main-page__subtitle {
+  text-align: center;
+  font-family: sans-serif;
+}
